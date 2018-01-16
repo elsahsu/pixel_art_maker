@@ -4,7 +4,8 @@
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
-
-// Your code goes here!
-
-}
+var pixel_canvas;
+pixel_canvas = $('#pixel_canvas').append('<tr><td></td></tr>');
+console.log(pixel_canvas);
+};
+makeGrid();
