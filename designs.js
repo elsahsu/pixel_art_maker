@@ -1,8 +1,9 @@
-// Select color input
-// Select size input
+//define currentColor
+var currentColor = "#000";
 
-// When size is submitted by the user, call makeGrid()
-
+//('td')table data = cell
+//('tr')table row = whole row
+//set canvas content empty
 function makeGrid(height, width) {
   var pixel_canvas = $('#pixel_canvas');
   pixel_canvas.empty();
@@ -15,6 +16,9 @@ function makeGrid(height, width) {
     pixel_canvas.append(row);
     console.log(pixel_canvas);
   }
+    pixel_canvas.on("click", "td", function(e) {
+    $(this).css("background-color", currentColor);
+  });
 };
 //prevent page reloading when submitting values
 $('#sizePicker').submit(function(evt){
@@ -26,10 +30,8 @@ $('#sizePicker').submit(function(evt){
   makeGrid(height, width);
 });
 
-//define currentColor
-var currentColor = "#000";
-
 //Change the currentColor to the selected one
 $("#colorPicker").change(function() {
   currentColor = $(this).val();
+  console.log(currentColor);
 });
