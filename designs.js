@@ -16,6 +16,7 @@ function makeGrid(height, width) {
     console.log(pixel_canvas);
   }
 };
+//prevent page reloading when submitting values
 $('#sizePicker').submit(function(evt){
   console.log(evt);
   event.preventDefault();
@@ -25,4 +26,10 @@ $('#sizePicker').submit(function(evt){
   makeGrid(height, width);
 });
 
-//make content of the table an empty string
+//define currentColor
+var currentColor = "#000";
+
+//Change the currentColor to the selected one
+$("#colorPicker").change(function() {
+  currentColor = $(this).val();
+});
