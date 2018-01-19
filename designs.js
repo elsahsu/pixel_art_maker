@@ -5,6 +5,7 @@
 
 function makeGrid(height, width) {
   var pixel_canvas = $('#pixel_canvas');
+  pixel_canvas.empty();
   for (var x = 0; x < height; x++) {
     var row = document.createElement('tr');
     for (var y = 0; y < width; y++) {
