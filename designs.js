@@ -23,7 +23,7 @@ function makeGrid(height, width) {
 //prevent page reloading when submitting values
 $('#sizePicker').submit(function(evt){
   console.log(evt);
-  event.preventDefault();
+  evt.preventDefault();
   var width = $('#input_width').val();
   var height = $('#input_height').val();
   console.log(width, height);
